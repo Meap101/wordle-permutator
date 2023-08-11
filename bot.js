@@ -101,7 +101,7 @@ dictionary.map(answerWord => { // start a virtual game of wordle for each word
             }
         })
 
-
+        mutableDictionary = narrowedGuesses;
 
         var nextGuess = narrowedGuesses[Math.floor(Math.random() * narrowedGuesses.length)]; // choose a random word from the possible guesses
 
