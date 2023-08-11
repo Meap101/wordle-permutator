@@ -24,6 +24,8 @@ dictionary.map(answerWord => { // start a virtual game of wordle for each word
     var guessMemoryYlw = [];
     var guessMemoryGry = [];
 
+    var mutableDictionary = dictionary;
+
     var currentlyChecking = starter;
     var guessHistory = [];
 
@@ -57,7 +59,7 @@ dictionary.map(answerWord => { // start a virtual game of wordle for each word
 
         var narrowedGuesses = []
 
-        dictionary.map(possibleGuess => { // actually solve the wordle
+        mutableDictionary.map(possibleGuess => { // actually solve the wordle
 
             let mutableGuess = possibleGuess;
             let viable = true;
